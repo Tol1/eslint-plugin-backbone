@@ -40,5 +40,33 @@ module.exports = {
         "no-view-onoff-binding": 2,
         "no-view-qualified-jquery": 0,
         "render-return": 2
+    },
+    configs: {
+        default: {
+            "rules": {
+                "backbone/collection-model": 2,
+                "backbone/defaults-on-top": 1,
+                "backbone/event-scope": 1,
+                "backbone/events-on-top": [1, ["tagName", "className"]],
+                "backbone/initialize-on-top": [1, {
+                    View: ["tagName", "className", "events"],
+                    Model: ["defaults", "url", "urlRoot"],
+                    Collection: ["model", "url"]
+                }],
+                "backbone/model-defaults": 2,
+                "backbone/no-changed-set": 2,
+                "backbone/no-collection-models": 2,
+                "backbone/no-constructor": 1,
+                "backbone/no-el-assign": 2,
+                "backbone/no-model-attributes": 2,
+                "backbone/no-native-jquery": [1, "selector"],
+                "backbone/no-silent": 1,
+                "backbone/no-view-collection-models": 2,
+                "backbone/no-view-model-attributes": 2,
+                "backbone/no-view-onoff-binding": 2,
+                "backbone/no-view-qualified-jquery": 0,
+                "backbone/render-return": 2
+            }
+        }
     }
 };
